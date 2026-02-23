@@ -83,12 +83,60 @@
 <section id="contact" class="section bg-dark">
   <div class="container">
     <h2>Let’s Build Something Great</h2>
-    <p>Email: anand@example.com</p>
+    <p>Email: anandpratapyadav@gmail.com</p>
     <p>LinkedIn: linkedin.com/in/yourprofile</p>
     <a href="mailto:anand@example.com" class="btn-secondary">Contact Me</a>
   </div>
+  <div class="contact-container">
+    <h2>Let's Build Your SaaS Product</h2>
+    <p>Minimum Engagement: $20,000</p>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company Name" />
+
+      <select name="budget" required>
+        <option value="">Select Budget</option>
+        <option value="$20K - $40K">$20K - $40K</option>
+        <option value="$40K - $80K">$40K - $80K</option>
+        <option value="$80K+">$80K+</option>
+      </select>
+
+      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="status"></p>
+  </div>
 </section>
 
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("K5jnVc75Jxfk5gwRf"); // Replace with your Public Key
+  })();
+
+  document.getElementById("contact-form")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm(
+        "service_6z0uisf",    // Replace
+        "template_r7a2ydn",   // Replace
+        this
+      ).then(function() {
+        document.getElementById("status").innerHTML = "Message Sent Successfully 🚀";
+      }, function(error) {
+        document.getElementById("status").innerHTML = "Failed to send message ❌";
+      });
+
+      this.reset();
+    });
+</script>
 <footer>
   <p>© 2026 Anand Yadav. All rights reserved.</p>
 </footer>
