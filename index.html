@@ -74,22 +74,19 @@
       <span>React</span>
       <span>MongoDB</span>
       <span>PostgreSQL</span>
+	  <span>MSSQL</span>
+	  <span>MySQL</span>
       <span>AWS</span>
       <span>Docker</span>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section bg-dark">
-  <div class="container">
-    <h2>Let’s Build Something Great</h2>
-    <p>Email: anandpratapyadav@gmail.com</p>
-    <p>LinkedIn: https://www.linkedin.com/in/anand-pratap-yadav-a5a93276/</p>
-    <a href="mailto:anand@example.com" class="btn-secondary">Contact Me</a>
-  </div>
+<!-- CONTACT SECTION WITH FORM -->
+<section id="contact" class="contact-section">
   <div class="contact-container">
-    <h2>Let's Build Your SaaS Product</h2>
-    <p>Minimum Engagement: $20,000</p>
+    <h2>Let’s Build Something Great</h2>
+    <p><strong>Minimum Engagement: $20,000</strong></p>
 
     <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -109,15 +106,29 @@
     </form>
 
     <p id="status"></p>
+
+    <hr style="margin:40px 0; opacity:0.2;">
+
+    <p><strong>Email:</strong> anandpratapyadav@gmail.com</p>
+    <p><strong>Phone:</strong> +91-8319042037</p>
+    <p><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/anand-pratap-yadav-a5a93276/" target="_blank" style="color:#3b82f6;">
+        linkedin.com/in/yourprofile
+      </a>
+    </p>
   </div>
 </section>
 
-<!-- EmailJS Script -->
+<footer>
+  <p>© 2026 Anand Pratap Yadav. All rights reserved.</p>
+</footer>
+
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
   (function(){
-    emailjs.init("K5jnVc75Jxfk5gwRf"); // Replace with your Public Key
+    emailjs.init("K5jnVc75Jxfk5gwRf"); 
   })();
 
   document.getElementById("contact-form")
@@ -125,8 +136,8 @@
       event.preventDefault();
 
       emailjs.sendForm(
-        "service_6z0uisf",    // Replace
-        "template_r7a2ydn",   // Replace
+        "service_6z0uisf",
+        "template_r7a2ydn",
         this
       ).then(function() {
         document.getElementById("status").innerHTML = "Message Sent Successfully 🚀";
@@ -137,9 +148,6 @@
       this.reset();
     });
 </script>
-<footer>
-  <p>© 2026 Anand Yadav. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
