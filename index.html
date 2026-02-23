@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anand Yadav | Full Stack Consultant</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anand Pratap Yadav | Full Stack Consultant</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
 
 <header class="navbar">
   <div class="container nav-content">
-    <h2 class="logo">Anand Yadav</h2>
+    <h2>Anand Pratap Yadav</h2>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#tech">Tech Stack</a>
+	  <a href="#tech">Tech Stack</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <div class="container hero-content">
-    <h1>I Build Scalable SaaS Products For US & UK Startups</h1>
-    <p>Senior Full Stack Consultant (Node.js | Python | Angular | React)</p>
+  <div class="container">
+    <h1>I Build Scalable SaaS Products for US & UK Startups</h1>
+    <p>Senior Full Stack Consultant | Node.js • Python • Angular • React</p>
     <a href="#contact" class="btn-primary">Book a Discovery Call</a>
   </div>
 </section>
@@ -32,11 +36,9 @@
 <section id="about" class="section">
   <div class="container">
     <h2>About Me</h2>
-    <p>
-      12+ years of experience building enterprise and startup applications.
-      I help founders build scalable SaaS platforms with clean architecture,
-      performance optimization and secure backend systems.
-    </p>
+    <p>12+ years of experience building enterprise & startup SaaS applications.
+    I help founders design scalable backend systems, high-performance frontends,
+    and cloud-native architectures.</p>
   </div>
 </section>
 
@@ -44,22 +46,10 @@
   <div class="container">
     <h2>Services</h2>
     <div class="grid">
-      <div class="card">
-        <h3>Custom SaaS Development</h3>
-        <p>End-to-end product development from MVP to scale.</p>
-      </div>
-      <div class="card">
-        <h3>Backend Architecture</h3>
-        <p>Node.js & Python microservices with cloud scalability.</p>
-      </div>
-      <div class="card">
-        <h3>Frontend Engineering</h3>
-        <p>High-performance Angular & React applications.</p>
-      </div>
-      <div class="card">
-        <h3>Cloud & DevOps</h3>
-        <p>AWS deployment, Docker, CI/CD, monitoring.</p>
-      </div>
+      <div class="card"><h3>Custom SaaS Development</h3><p>MVP to scalable production systems.</p></div>
+      <div class="card"><h3>Backend Architecture</h3><p>Node.js & Python microservices.</p></div>
+      <div class="card"><h3>Frontend Engineering</h3><p>Modern Angular & React apps.</p></div>
+      <div class="card"><h3>Cloud & DevOps</h3><p>AWS, Docker, CI/CD pipelines.</p></div>
     </div>
   </div>
 </section>
@@ -82,71 +72,82 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION WITH FORM -->
-<section id="contact" class="contact-section">
-  <div class="contact-container">
-    <h2>Let’s Build Something Great</h2>
-    <p><strong>Minimum Engagement: $20,000</strong></p>
+<section id="pricing" class="section">
+  <div class="container">
+    <h2>Engagement Models</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Dedicated Monthly Partner</h3>
+        <div class="price">$5K+ / month</div>
+        <p>Ongoing product development & scaling support.</p>
+      </div>
+      <div class="pricing-card">
+        <h3>MVP Development</h3>
+        <div class="price">$20K+</div>
+        <p>End-to-end MVP build with production readiness.</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Technical Advisory</h3>
+        <div class="price">$50 / hour</div>
+        <p>Architecture reviews & technical consulting.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="company" placeholder="Company Name" />
+<section id="contact" class="section">
+  <div class="container contact-wrapper">
+    <div>
+      <h2>Let’s Work Together</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <select name="budget" required>
+          <option value="">Select Budget</option>
+          <option>$5K+/month</option>
+          <option>$20K+</option>
+          <option>$50/hour</option>
+          <option>Open to discussion</option>
+        </select>
+        <textarea name="message" placeholder="Describe your project..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="status"></p>
+    </div>
 
-      <select name="budget" required>
-        <option value="">Select Budget</option>
-        <option value="$20K - $40K">$20K - $40K</option>
-        <option value="$40K - $80K">$40K - $80K</option>
-        <option value="$80K+">$80K+</option>
-      </select>
-
-      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <p id="status"></p>
-
-    <hr style="margin:40px 0; opacity:0.2;">
-
-    <p><strong>Email:</strong> anandpratapyadav@gmail.com</p>
-    <p><strong>Phone:</strong> +91-8319042037</p>
-    <p><strong>LinkedIn:</strong> 
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p>Email: anandpratapyadav@gmail.com</p>
+      <p>Phone: +91-8319042037</p>
+      <p><strong>LinkedIn:</strong> 
       <a href="https://www.linkedin.com/in/anand-pratap-yadav-a5a93276/" target="_blank" style="color:#3b82f6;">
         linkedin.com/in/yourprofile
       </a>
-    </p>
+      <p>Currently accepting 1 new client</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Anand Pratap Yadav. All rights reserved.</p>
+  © 2026 Anand Pratap Yadav. All rights reserved.
 </footer>
 
-<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-  (function(){
-    emailjs.init("K5jnVc75Jxfk5gwRf"); 
-  })();
-
-  document.getElementById("contact-form")
-    .addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      emailjs.sendForm(
-        "service_6z0uisf",
-        "template_r7a2ydn",
-        this
-      ).then(function() {
-        document.getElementById("status").innerHTML = "Message Sent Successfully 🚀";
-      }, function(error) {
-        document.getElementById("status").innerHTML = "Failed to send message ❌";
-      });
-
-      this.reset();
-    });
+(function(){
+  emailjs.init("K5jnVc75Jxfk5gwRf");
+})();
+document.getElementById("contact-form")
+.addEventListener("submit", function(event) {
+  event.preventDefault();
+  emailjs.sendForm("service_6z0uisf","template_r7a2ydn",this)
+  .then(function(){
+    document.getElementById("status").innerHTML="Message Sent Successfully 🚀";
+  },function(){
+    document.getElementById("status").innerHTML="Failed to send ❌";
+  });
+  this.reset();
+});
 </script>
 
 </body>
